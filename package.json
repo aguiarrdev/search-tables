@@ -1,0 +1,24 @@
+{
+  "name": "search-tables",
+  "version": "0.0.1",
+  "description": "Initial setup for wordpress plugin",
+  "repository": "https://github.com/aguiarr/wp-plugin-setup",
+  "author": "Matheus Aguiar",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "sass": "^1.32.8",
+    "bootstrap": "^5.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp build"
+  }
+}
