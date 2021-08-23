@@ -17,6 +17,7 @@ class Config {
 
         return [
             ['Search', 'Search'],
+            ['SqlQuery', 'SQL Query'],
             ['About', 'About'],
         ];
 
