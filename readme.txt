@@ -8,8 +8,6 @@ Requires PHP: 7.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Duplicate your images as many times as you want.
-
 == Description ==
 Initial setup for wordpress plugin
 
@@ -25,5 +23,5 @@ Initial setup for wordpress plugin
 
 == Changelog ==
 
-= 0.0.1 = 2021-08-09
+= 0.0.1 = 2021-00-00
 # Initial Release 

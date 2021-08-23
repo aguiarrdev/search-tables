@@ -1,7 +1,7 @@
 <?php
 /**
  * Name: Search
- * Package: View
+ * @package View
  * Controller: SearchTables\Controllers\Menus\Search
  * Style File: 
  * Version: 1.0.0
@@ -17,10 +17,14 @@
 <div class="container">
     <div class="table">
         <div class="rel_wrap">
-            <h1><?php echo __( 'Search Tables' ); ?></h1>
-            <table class="stripe" width="100%" cellpadding="1" cellspacing="1" id="tableList">
+            <div class="row">
+                <h1 class="col-sm"><?php echo __( 'Search Tables' ); ?></h1>
+                <input class="col-sm searchInput" style="height: 30px; margin-top:15px;" type="text" id="search-input" placeholder="Search tables..">
+            </div>
+            <br>
+            <table id="tableList" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
                 <thead>
-                    <tr class="table-title">
+                    <tr class="header">
                         <th style="text-align:left" width="70%"><?php echo __( 'Table Name', 'search-tables' ); ?></th>
                         <th style="text-align:left" width="30%"><?php echo __( 'Size', 'search' ); ?></th>
                     </tr>

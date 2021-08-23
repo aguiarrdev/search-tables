@@ -8,7 +8,7 @@ use SearchTables\Model\Tables;
 
 /**
  * Name: About
- * Package: Controller
+ * @package Controller
  * Type: Menu Controller
  * View path: about.php
  * Version: 1.0.0

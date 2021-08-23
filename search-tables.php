@@ -13,6 +13,7 @@
  */
 
 require __DIR__ . '/vendor/autoload.php';
+
 if ( version_compare( phpversion(), '5.6' ) < 0  ) {
 	wp_die( "The Search Tables isn't compatible to your PHP version. <p>The PHP version has to be a less 5.7</p>",
 		'The Search Tables -- Error',

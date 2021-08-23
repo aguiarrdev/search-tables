@@ -1,8 +1,8 @@
 <?php
 /**
  * Name: About Me
- * Package: View
- * Controller: SearchTables\Controllers\About
+ * @package View
+ * Controller: SearchTables\Controllers\Menus\About
  * Style File: 
  * Version: 1.0.0
  */

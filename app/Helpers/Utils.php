@@ -4,7 +4,7 @@ namespace SearchTables\Helpers;
 
 /**
  * Name: Utils
- * Package: Helper
+ * @package Helper
  * Description: Has the statics methods
  * Version: 1.0.0
  */

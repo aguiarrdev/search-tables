@@ -4,7 +4,7 @@ namespace SearchTables\Helpers;
 
 /**
  * Name: Config
- * Package: Helper
+ * @package Helper
  * Description: Create configuration methods
  * Version: 1.0.0
  */
