@@ -4,15 +4,16 @@ namespace SearchTables\Controllers\Menus;
 
 use SearchTables\Controllers\InterfaceController;
 use SearchTables\Controllers\RenderHtml;
-use SearchTables\Model\Tables;
+use SearchTables\Model\Infrastructure\Tables;
 
 /**
  * Name: About
  * @package Controller
  * Type: Menu Controller
  * View path: about.php
- * Version: 1.0.0
+ * @since 1.0.0
  */
+
 class Search extends RenderHtml implements InterfaceController{
 
     private Tables $table_collection;
@@ -52,7 +53,7 @@ class Search extends RenderHtml implements InterfaceController{
     {
         $this->getTables();
 
-        echo $this->render( 'search.php',[ 
+        echo $this->render( 'Admin/search.php',[ 
             'tables' => $this->tables 
         ]);
     }

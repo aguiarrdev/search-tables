@@ -1,0 +1,16 @@
+.search-table {
+    .searchInput {
+        width: 100%;
+        height: 40px !important;
+        border-radius: 10px;
+    }
+
+    .table-count {
+        padding-top: 10px;
+        float: right;
+
+        span {
+            font-weight: bold;
+        }
+    }
+}

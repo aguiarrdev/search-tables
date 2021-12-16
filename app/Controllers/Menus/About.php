@@ -10,12 +10,12 @@ use SearchTables\Controllers\RenderHtml;
  * @package Controller
  * Type: Menu Controller
  * View path: about.php
- * Version: 1.0.0
+ * @since 0.0.1
  */
 class About extends RenderHtml implements InterfaceController{
 
     public function request(): void
     {
-        echo $this->render( 'about.php',[] );
+        echo $this->render( 'Admin/about.php',[] );
     }
 }

@@ -6,7 +6,7 @@ namespace SearchTables\Helpers;
  * Name: Utils
  * @package Helper
  * Description: Has the statics methods
- * Version: 1.0.0
+ * @since 0.0.1
  */
 class Utils {
 
@@ -31,5 +31,44 @@ class Utils {
             $count++;
         }
         return $view;
+    }
+
+    public static function parse_controller( $vew, $namespace = "Actions" ) 
+    {
+
+        $split = str_split( $vew );
+        $namespace = WP_PLUGIN_NAMESPACE . "\\Controllers\\$namespace\\";
+        $class_name = '';
+        $count = 0;
+
+        $next_upper = false;
+
+        foreach ( $split as $letter ) {
+
+            if ( $count === 0 ) {
+                $class_name .= strtoupper( $letter );
+            }else {
+
+                if ( $letter === '_' ) {
+                    $next_upper = true;
+    
+                } else {
+                    if ( $next_upper ) {
+                        $class_name .= strtoupper( $letter );
+    
+                    } else {
+                        $class_name .= $letter;
+                    }
+    
+                    $next_upper = false;
+                }
+            }
+
+            $count++;
+        }
+
+        $controller = $namespace .= $class_name;
+
+        return $controller;
     }
 }

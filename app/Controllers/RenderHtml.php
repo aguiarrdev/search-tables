@@ -8,7 +8,7 @@ namespace SearchTables\Controllers;
  * @package Controller
  * Type: Process Controller
  * Description: Create the method that renders views
- * Version: 1.0.0
+ * @since 1.0.0
  */
 abstract class RenderHtml
 {

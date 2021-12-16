@@ -7,7 +7,7 @@ namespace SearchTables\Controllers;
  * @package Controller
  * Type: Process
  * Description: Create the controllers interface
- * Version: 1.0.0
+ * @since 1.0.0
  */
 interface InterfaceController
 {

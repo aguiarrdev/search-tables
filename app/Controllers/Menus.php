@@ -10,7 +10,7 @@ use SearchTables\Helpers\Utils;
  * @package Controller
  * Type: Process Controller
  * Description: Handle creating submenus
- * Version: 1.0.0
+ * @since 1.0.0
  */
 class Menus {
     
