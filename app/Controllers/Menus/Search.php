@@ -4,6 +4,7 @@ namespace SearchTables\Controllers\Menus;
 
 use SearchTables\Controllers\InterfaceController;
 use SearchTables\Controllers\RenderHtml;
+use SearchTables\Helpers\Utils;
 use SearchTables\Model\Infrastructure\Tables;
 
 /**
@@ -18,13 +19,29 @@ class Search extends RenderHtml implements InterfaceController{
 
     private Tables $table_collection;
     private array $tables;
+    private array $rows;
+    private array $vars;
 
     public function __construct()
     {
+        $r_vars = Utils::get_requests_vars();
+
         $this->table_collection = new Tables();
+        
+        if ( is_array( $r_vars ) && isset( $r_vars['row'] ) ) {
+            $this->handle_row( $r_vars['row'] );
+        } else {
+            $this->handle_table();
+        }
+
+    }
+    
+    private function handle_row( string $row_name ): void
+    {
+
     }
 
-    private function getTables(): void
+    private function handle_table(): void
     {
         $this->tables = [];
         $all_tables = $this->table_collection->getTables();
@@ -49,12 +66,21 @@ class Search extends RenderHtml implements InterfaceController{
         }
     }
 
+    public function get_vars(): void
+    {
+        if ( isset( $this->tables ) && ! empty( $this->tables ) ) {
+            $this->vars['tables'] = $this->tables;
+        }
+
+        if ( isset( $this->rows ) && ! empty( $this->rows ) ) {
+            $this->vars['rows'] = $this->tables;
+        }
+    }
+
     public function request(): void
     {
-        $this->getTables();
+        $this->get_vars();
 
-        echo $this->render( 'Admin/search.php',[ 
-            'tables' => $this->tables 
-        ]);
+        echo $this->render( 'Admin/search.php', $this->vars );
     }
 }

@@ -71,4 +71,20 @@ class Utils {
 
         return $controller;
     }
+
+    public static function redirect_to_menu_page( $to_page )
+    {
+        header( "Location: /wp-admin/admin.php?page=$to_page", false, 302 );
+    }
+
+    public static function get_requests_vars()
+    {
+        if ( isset( $_REQUEST ) && is_array( $_REQUEST ) ) {
+            if ( ! empty( $_REQUEST ) ) {
+                return $_REQUEST;
+            }
+        } 
+
+        return false;
+    }
 }

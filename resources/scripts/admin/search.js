@@ -1,13 +1,12 @@
-window.onload = () => {
+document.addEventListener( "DOMContentLoaded", () => {
     var searchInput = document.getElementById("search-input");
     searchInput.addEventListener("keyup", () => {
-        // Declare variables
+
         var filter, table, tr, td, i, txtValue;
         filter = searchInput.value.toUpperCase();
-        table = document.getElementById("tableList");
+        table = document.getElementById("table-list");
         tr = table.getElementsByTagName("tr");
     
-        // Loop through all table rows, and hide those who don't match the search query
         for (i = 0; i < tr.length; i++) {
             td = tr[i].getElementsByTagName("td")[0];
             if (td) {
@@ -20,4 +19,4 @@ window.onload = () => {
             }
         }
     });
-}
+})

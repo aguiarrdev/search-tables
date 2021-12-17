@@ -1,6 +1,6 @@
 <?php
 /**
  * Template Name: Header
- * @since 0.0.1
+ * @since 1.0.0
  */
 ?>
