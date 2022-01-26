@@ -14,22 +14,28 @@
         <div class="table">
             <div class="row">
                 <h1 class="col-sm"><?php echo __('Search Tables'); ?></h1>
-                <input class="col-sm searchInput" style="height: 30px; margin-top:15px;" type="text" id="search-input" placeholder="Search tables..">
+                <hr>
             </div>
             <br>
             <table id="table-list" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
 
-                <?php if ( isset( $tables ) && is_array( $tables ) ) : ?>
-                    <?php require_once __DIR__ . "/template-parts/tables.php"?>
-
-                <?php elseif ( isset( $rows ) && is_array( $rows ) ): ?>
-                    <?php require_once __DIR__ . "/template-parts/tables.php"?>
-                <?php endif;?>
-
+                <?php if (isset($tables) && is_array($tables)) : ?>
+                    <thead>
+                        <tr class="heade">
+                            <th style="text-align:left" width="70%"><?php echo __('Table Name', 'search-tables'); ?></th>
+                            <th style="text-align:left" width="30%"><?php echo __('Size', 'search'); ?></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($tables as $table) : ?>
+                            <tr class="table-row table-row-tables" data-table="<?php echo __(isset($table['name']) ? $table['name'] : '') ?>">
+                                <td><?php echo __(isset($table['name']) ? $table['name'] : ''); ?></td>
+                                <td><?php echo __(isset($table['size']) ? $table['size'] : ''); ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                <?php endif; ?>
             </table>
-            <div class="table-count">
-                <span><?php echo __("Qnt Tabelas: " . count($tables)); ?></span>
-            </div>
         </div>
     </div>
 </div>

@@ -9,9 +9,7 @@ use SearchTables\Model\Infrastructure\Tables;
 
 /**
  * Name: About
- * @package Controller
- * Type: Menu Controller
- * View path: about.php
+ * @package Menu Controller
  * @since 1.0.0
  */
 
@@ -71,10 +69,6 @@ class Search extends RenderHtml implements InterfaceController{
         if ( isset( $this->tables ) && ! empty( $this->tables ) ) {
             $this->vars['tables'] = $this->tables;
         }
-
-        if ( isset( $this->rows ) && ! empty( $this->rows ) ) {
-            $this->vars['rows'] = $this->tables;
-        }
     }
 
     /**
@@ -84,7 +78,6 @@ class Search extends RenderHtml implements InterfaceController{
     public function request()
     {
         $this->get_vars();
-
         echo $this->render( 'Admin/search.php', $this->vars );
     }
 }

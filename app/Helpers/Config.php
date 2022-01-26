@@ -17,8 +17,8 @@ class Config {
     public static function controllers() 
     {
         return [
-            ['Search', 'Search'],
             ['About', 'About'],
+            ['Search', 'Search'],
         ];
 
     }

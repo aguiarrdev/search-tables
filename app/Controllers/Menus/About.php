@@ -8,7 +8,7 @@ use SearchTables\Controllers\RenderHtml;
 /**
  * Name: About
  * @package Menu Controller
- * @since 0.0.1
+ * @since 1.0.0
  */
 class About extends RenderHtml implements InterfaceController{
 

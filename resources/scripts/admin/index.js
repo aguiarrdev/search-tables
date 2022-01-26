@@ -1,2 +1,2 @@
-import "./search";
-import "./selected_row";
+// import "./search";
+import "./datables";
