@@ -7,9 +7,8 @@ use SearchTables\Helpers\Utils;
 
 /**
  * Name: Menus
+ * Handle creating submenus
  * @package Controller
- * Type: Process Controller
- * Description: Handle creating submenus
  * @since 1.0.0
  */
 class Menus {
@@ -21,8 +20,10 @@ class Menus {
 
     /**
      * Get the menu controllers
+     * @return Void
      */
-    private function initialize_menus() {
+    private function initialize_menus() 
+    {
 
         $controllers = Config::controllers();
         $menus = [];
@@ -44,8 +45,11 @@ class Menus {
 
     /**
      * Create the submenus
+     * @param Array $menus
+     * @return Void
      */
-    private function create_menus( array $menus ) {
+    private function create_menus( $menus ) 
+    {
 
         foreach ( $menus as $menu ) {
             add_submenu_page(WP_PLUGIN_SLUG ,$menu['title'],$menu['title'],'manage_options',$menu['slug'],$menu['function'],$menu['position']);

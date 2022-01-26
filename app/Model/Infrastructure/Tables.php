@@ -5,7 +5,6 @@ namespace SearchTables\Model\Infrastructure;
 /**
  * Name: Tables
  * @package Model
- * Type: Infrastrucure
  * @since 1.0.0
  */
 

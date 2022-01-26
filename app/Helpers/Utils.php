@@ -4,13 +4,18 @@ namespace SearchTables\Helpers;
 
 /**
  * Name: Utils
+ * Has the statics utils methods
  * @package Helper
- * Description: Has the statics methods
- * @since 0.0.1
+ * @since 1.0.0
  */
 class Utils {
 
-    public static function parse_view( string $controller ) {
+    /**
+     * Parse controller name to view name
+     * @return String
+     */
+    public static function parse_view( $controller ) 
+    {
 
         $split = str_split( $controller );
         $view = '';
@@ -33,6 +38,10 @@ class Utils {
         return $view;
     }
 
+    /**
+     * Parse view name to controller name
+     * @return String
+     */
     public static function parse_controller( $vew, $namespace = "Actions" ) 
     {
 
@@ -72,11 +81,19 @@ class Utils {
         return $controller;
     }
 
+    /**
+     * Redirect user to menu page
+     * @return Void
+     */
     public static function redirect_to_menu_page( $to_page )
     {
         header( "Location: /wp-admin/admin.php?page=$to_page", false, 302 );
     }
 
+    /**
+     * Get the request vars
+     * @return Mixed
+     */
     public static function get_requests_vars()
     {
         if ( isset( $_REQUEST ) && is_array( $_REQUEST ) ) {

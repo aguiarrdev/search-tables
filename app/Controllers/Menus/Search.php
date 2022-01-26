@@ -36,12 +36,12 @@ class Search extends RenderHtml implements InterfaceController{
 
     }
     
-    private function handle_row( string $row_name ): void
+    private function handle_row( $row_name )
     {
 
     }
 
-    private function handle_table(): void
+    private function handle_table()
     {
         $this->tables = [];
         $all_tables = $this->table_collection->getTables();
@@ -66,7 +66,7 @@ class Search extends RenderHtml implements InterfaceController{
         }
     }
 
-    public function get_vars(): void
+    public function get_vars()
     {
         if ( isset( $this->tables ) && ! empty( $this->tables ) ) {
             $this->vars['tables'] = $this->tables;
@@ -77,7 +77,11 @@ class Search extends RenderHtml implements InterfaceController{
         }
     }
 
-    public function request(): void
+    /**
+     * Render the menu view file
+     * @return Void
+     */
+    public function request()
     {
         $this->get_vars();
 

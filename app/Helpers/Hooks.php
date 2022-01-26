@@ -4,9 +4,9 @@ namespace SearchTables\Helpers;
 
 /**
  * Name: Hooks
+ * Call the actions and filters
  * @package Helper
- * Description: Call the actions and filters
- * @since 0.0.1
+ * @since 1.0.0
  */
 add_action( 'admin_menu', [
     'SearchTables\Helpers\Functions',
