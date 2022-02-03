@@ -1,14 +1,3 @@
-<?php
-
-/**
- * Name: Search
- * @package View
- * Controller: SearchTables\Controllers\Menus\Search
- * Style File: 
- * @since 1.0.0
- */
-?>
-
 <div class="wrap search-table">
     <div class="container">
         <div class="table">
@@ -22,8 +11,9 @@
                 <?php if (isset($tables) && is_array($tables)) : ?>
                     <thead>
                         <tr class="heade">
-                            <th style="text-align:left" width="70%"><?php echo __('Table Name', 'search-tables'); ?></th>
-                            <th style="text-align:left" width="30%"><?php echo __('Size', 'search'); ?></th>
+                            <th style="text-align:left" width="50%"><?php echo __('Table Name', 'search-tables'); ?></th>
+                            <th style="text-align:left" width="25%"><?php echo __('Size', 'search'); ?></th>
+                            <th style="text-align:left" width="25%"><?php echo __('Actions', 'search'); ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -31,6 +21,7 @@
                             <tr class="table-row table-row-tables" data-table="<?php echo __(isset($table['name']) ? $table['name'] : '') ?>">
                                 <td><?php echo __(isset($table['name']) ? $table['name'] : ''); ?></td>
                                 <td><?php echo __(isset($table['size']) ? $table['size'] : ''); ?></td>
+                                <td class="td-actions"><button class="btn btn-action" data-table="<?php echo __(isset($table['name']) ? $table['name'] : '') ?>">Open<i class="fas fa-folder-open"></i></button></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

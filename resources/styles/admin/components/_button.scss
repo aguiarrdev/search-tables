@@ -1,32 +1,40 @@
-.search-table .btn {  
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    padding: 10px 16px;
-    min-width: 120px;
-    min-height: 20px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    margin: 15px 0 0 0;
-    border: solid;
-    border-radius: 5px;
-    border-width: 1px;
+.search-table  {
+    .btn {  
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        padding: 10px 16px;
+        min-height: 20px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        margin: 15px 0 5px 0;
+        border: solid;
+        border-radius: 5px;
+        border-width: 1px;
+    
+        &-action {
+            background-color: transparent;
+            font-weight: 800;
+            color: $primary;
+            margin: 5px 0 5px 0;
+        }
 
-    &-primary {
-        background-color: $primary;
-        border-color: $secondary;
-        color: #fff;
-    }
-
-    &-secondary {
-        background-color: $secondary;
-        color: $primary;
-    }
-
-    &:hover,
-    &:focus {
-      opacity: .9;
-      transform: translateY(-1px);
+        &-primary {
+            background-color: $primary;
+            border-color: $secondary;
+            color: #fff;
+        }
+    
+        &-secondary {
+            background-color: $secondary;
+            color: $primary;
+        }
+    
+        &:hover,
+        &:focus {
+          opacity: .9;
+          transform: translateY(-1px);
+        }
     }
 }
