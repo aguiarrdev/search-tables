@@ -12,7 +12,7 @@ class Tables
                 let table = btn.getAttribute("data-table");
 
                 btn.addEventListener("click", () => {
-                    window.location.href = `${window.location.href}&row=${table}`;
+                    window.location.href = `${window.location.href}&table=${table}`;
                 });
             }
         });

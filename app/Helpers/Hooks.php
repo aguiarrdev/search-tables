@@ -17,8 +17,3 @@ add_action( 'init', [
     'SearchTables\Helpers\Functions',
     'initialize'
 ] );
-
-add_action( 'init', [
-    'SearchTables\Helpers\Functions',
-    'handle_actions'
-] );

@@ -1,2 +1,2 @@
-import './scripts/admin/index';
-import './styles/admin/index.scss';
+import "./scripts/admin/index";
+import "./styles/admin/index.scss";

@@ -19,16 +19,27 @@ class Tables
         global $wpdb;
         $this->db = $wpdb;
 
-        $this->getDatabaseName();
-        $this->showTables();
+        $this->get_database_name();
+        
     }
 
-    public function getTables(): array
+    public function get_table( $table )
     {
-        return $this->tables;
+        $query = "SELECT * FROM $table;";
+        $results = $this->db->get_results($query);
+
+        return $results;
     }
 
-    public function getTableSize( string $table ): int
+    public function get_table_columns( $table )
+    {
+        $query = "DESCRIBE $table";
+        $results = $this->db->get_results($query);
+
+        return $results;
+    }
+
+    public function get_table_size( string $table ): int
     {
         $query = "SELECT
         ((DATA_LENGTH + INDEX_LENGTH) / 1024 )
@@ -45,16 +56,17 @@ class Tables
         return $results['((DATA_LENGTH + INDEX_LENGTH) / 1024 )'];
     }
 
-    private function showTables(): void
+    public function show_tables()
     {
         $query = "SHOW TABLES;";
         $results = $this->db->get_results($query);
 
-        $tables = $this->sanitizeTableName( $results );
-        $this->tables = $tables;
+        $tables = $this->sanitize_table_name( $results );
+
+        return $tables;
     }
 
-    private function sanitizeTableName( array $table_list ): array
+    private function sanitize_table_name( array $table_list ): array
     {
         $results = [];
         foreach ( $table_list as $table ) {
@@ -67,7 +79,7 @@ class Tables
         return $results;
     }
 
-    private function getDatabaseName(): void
+    private function get_database_name(): void
     {
         $query = "SELECT database();";
         $results = (array)$this->db->get_results($query)[0];
