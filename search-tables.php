@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: Search Tables
- * Plugin URI:  https://github.com/aguiarr/
+ * Plugin URI:  https://github.com/aguiarrdev/
  * Description: Initial setup for wordpress plugin
  * Version:     1.0.0
  * Author:      Matheus Aguiar
- * Author URI:  https://github.com/aguiarr/
+ * Author URI:  https://github.com/aguiarrdev/
  *
- * @link    https://github.com/aguiarr/
+ * @link    https://github.com/aguiarrdev/
  * @since   1.0.0
  * @package SearchTables
  */

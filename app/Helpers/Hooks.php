@@ -17,3 +17,8 @@ add_action( 'init', [
     'SearchTables\Helpers\Functions',
     'initialize'
 ] );
+
+add_filter( 'plugin_action_links', [
+    'SearchTables\Helpers\Functions',
+    'settings_link'
+], 10, 2 );

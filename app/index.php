@@ -7,6 +7,7 @@ define( 'WP_PLUGIN_NAME', 'Search Tables' );
 define( 'WP_PLUGIN_SLUG', 'search-tables' );
 define( 'WP_PLUGIN_PREFIX', 'search-tables' );
 define( 'WP_PLUGIN_NAMESPACE', 'SearchTables' );
+define( 'WP_BASE_FILE', WP_PLUGIN_SLUG . '/' . 'search-tables.php' );
 
 // Define paths
 define( 'WP_PLUGIN_PATH', WP_PLUGIN_DIR . '/'. WP_PLUGIN_SLUG );

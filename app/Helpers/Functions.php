@@ -51,4 +51,26 @@ class Functions
     {
         load_plugin_textdomain( WP_PLUGIN_SLUG , false );
     }
+
+    /**
+     * Create extra link on plugins page
+     * @since 1.0.0
+     * @param array $arr
+     * @param string $name
+     * @return array
+     */
+    public static function settings_link( $arr, $name )
+    {
+        if( $name === WP_BASE_FILE ) {
+
+            $label = sprintf( '<a href="tools.php?page=search" id="settings-search-table" aria-label="%s">%s</a>',
+                __( 'Settings for Search Tables', WP_PLUGIN_SLUG ),
+                __( 'Settings', WP_PLUGIN_SLUG )
+            );
+
+            $arr['settings'] = $label;
+        }
+
+        return $arr;
+    }
 }
