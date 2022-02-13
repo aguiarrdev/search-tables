@@ -47,7 +47,7 @@ class Functions
         wp_enqueue_style( 'jquery-ui', 'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css' );
         wp_enqueue_style( 'jquery-ui-dt', 'https://cdn.datatables.net/1.11.4/css/dataTables.jqueryui.min.css' );
         wp_enqueue_style( 'data-table', 'https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css' );
-        wp_enqueue_style( 'fontawesome', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css' );
+        wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.15.4/css/all.css' );
     }
 
     /**

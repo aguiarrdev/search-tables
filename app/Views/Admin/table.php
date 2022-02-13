@@ -13,7 +13,7 @@
                             <?php foreach ($columns as $key => $colum) : ?>
                                     <th style="text-align:left"><?php echo __($colum->Field); ?></th>
                             <?php endforeach; ?>
-                            <th><?php echo __('Actions', 'search'); ?></th>
+                            <th><?php echo __('View', 'search'); ?></th>
                         </tr>
                     </thead>
                 <?php endif; ?>
@@ -25,7 +25,7 @@
                                     <?php foreach ( $rows as $row ) : ?>
                                         <td><?php echo __($row); ?></td>
                                     <?php endforeach; ?>
-                                    <td class="td-actions"><button class="btn btn-action">Copy<i class="fas fa-copy"></i></button></td>
+                                    <td class="td-actions"><button class="btn btn-action">View <i color="#f04e23">👁</i></button></td>
                                 </tr>
                         <?php endforeach; ?>
                 <?php endif; ?>
