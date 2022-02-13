@@ -3,12 +3,12 @@
  * Plugin Name: Search Tables
  * Plugin URI:  https://github.com/aguiarr/
  * Description: Initial setup for wordpress plugin
- * Version:     0.0.1
+ * Version:     1.0.0
  * Author:      Matheus Aguiar
  * Author URI:  https://github.com/aguiarr/
  *
  * @link    https://github.com/aguiarr/
- * @since   0.0.1
+ * @since   1.0.0
  * @package SearchTables
  */
 

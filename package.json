@@ -1,6 +1,6 @@
 {
   "name": "search-tables",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Initial setup for wordpress plugin",
   "repository": "https://github.com/aguiarrdev/search-tables",
   "author": "Matheus Aguiar",

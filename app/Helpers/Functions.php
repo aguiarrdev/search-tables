@@ -14,7 +14,8 @@ class Functions
 {
     /**
      * Create admin menu
-     * @return Void
+     * @since 1.0.0
+     * @return void
      */
     public static function create_admin_menu()
     {
@@ -24,7 +25,8 @@ class Functions
 
     /**
      * Add the admin scripts
-     * @return Void
+     * @since 1.0.0
+     * @return void
      */
     public static function enqueue_admin_scripts() 
     {
@@ -42,7 +44,8 @@ class Functions
 
     /**
      * Load Search Tables text domain
-     * @return Void
+     * @since 1.0.0
+     * @return void
      */
     public static function initialize()
     {

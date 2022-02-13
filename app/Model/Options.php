@@ -18,9 +18,9 @@ class Options
 
     /**
      * Update options
-     * @param String
-     * @param Mixed
-     * @return Mixed
+     * @param string
+     * @param mixed
+     * @return mixed
      */
     public function update( $opt, $value )
     {
@@ -32,8 +32,8 @@ class Options
 
     /**
      * Get options
-     * @param String
-     * @return Mixed
+     * @param string
+     * @return mixed
      */
     public function get( $opt )
     {
@@ -45,9 +45,9 @@ class Options
 
     /**
      * Create options
-     * @param String
-     * @param Mixed
-     * @return Mixed
+     * @param string
+     * @param mixed
+     * @return mixed
      */
     public function create( $opt, $value )
     {

@@ -16,6 +16,11 @@ class Search
         $this->vars = isset( $_REQUEST['table'] ) ? (array) $_REQUEST : array();
     }
 
+    /**
+     * Filter Controllers
+     * @since 1.0.0
+     * @return mixed
+     */
     public function request()
     {
         if ( isset( $this->vars['table'] ) ) {

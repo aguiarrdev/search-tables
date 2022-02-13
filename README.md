@@ -20,48 +20,70 @@ npm install
 
 ## File Tree
 ```
-'
-'  |-- app/                                     # MVC Directory
-'  |   |-- Controllers/                         # All plugin controllers
-'  |   |   |-- InterfaceController.php          # Controller Interface
-'  |   |   |-- Menus.php
-'  |   |   |-- RenderHtml.php                   # Create the method that renders views
-'  |   |   |-- Menus
-'  |   |   |   |-- About.php
-'  |   |-- Helpers/                             # All plugin classes and helper files
-'  |   |   |-- Config.php                       # Page controller settings
-'  |   |   |-- Hooks.php                        # Plugin actions and filters
-'  |   |   |-- Utils.php                        # Statics methods and function 
-'  |   |-- Model/
-'  |   |   |-- index.php
-'  |   |-- Views/                               # All the plugin pages
-'  |   |   |-- about.php
-'  |   |   |-- index.php
-'  |   |   |-- template-parts                   # Templates parts
-'  |   |   |   |-- header.php
-'  |   |-- index.php                            # Plugin Index
-'  |-- resources/                               # Plugin resources
-'  |   |-- images/
-'  |   |   |-- index.php
-'  |   |-- scripts/
-'  |   |   |-- admin/
-'  |   |   |   |-- index.js
-'  |   |   |-- theme/
-'  |   |   |   |-- index.js
-'  |   |-- styles/
-'  |   |   |-- admin/
-'  |   |   |   |-- _variaveis.scss
-'  |   |   |   |-- index.scss
-'  |   |   |-- theme/
-'  |   |   |   |-- _variaveis.scss
-'  |   |   |   |-- index.scss
-'  |-- .gitignore
-'  |-- LICENSE                                  # GPL-3 Licensce
-'  |-- README.md
-'  |-- composer.json
-'  |-- package.json
-'  |-- readme.txt
-'  |-- wp-plugin-setup.php
-''
+.
+├── app
+│   ├── Controllers
+│   │   ├── Actions
+│   │   │   └── index.php
+│   │   ├── InterfaceController.php
+│   │   ├── Menus
+│   │   │   ├── Database.php
+│   │   │   ├── Search.php
+│   │   │   └── Table.php
+│   │   ├── Menus.php
+│   │   └── RenderHtml.php
+│   ├── Helpers
+│   │   ├── Config.php
+│   │   ├── Functions.php
+│   │   ├── Hooks.php
+│   │   └── Utils.php
+│   ├── index.php
+│   ├── Model
+│   │   ├── index.php
+│   │   ├── Infrastructure
+│   │   │   └── Tables.php
+│   │   └── Options.php
+│   ├── Services
+│   │   └── index.php
+│   └── Views
+│       ├── Admin
+│       │   ├── database.php
+│       │   ├── table.php
+│       │   └── template-parts
+│       │       └── header.php
+│       └── index.php
+├── composer.json
+├── LICENSE
+├── package.json
+├── README.md
+├── readme.txt
+├── resources
+│   ├── admin.js
+│   ├── images
+│   │   └── index.php
+│   ├── scripts
+│   │   ├── admin
+│   │   │   ├── datables.js
+│   │   │   ├── index.js
+│   │   │   └── tables.js
+│   │   └── theme
+│   │       └── index.js
+│   ├── styles
+│   │   ├── admin
+│   │   │   ├── base
+│   │   │   │   ├── index.scss
+│   │   │   │   └── _vars.scss
+│   │   │   ├── components
+│   │   │   │   ├── _button.scss
+│   │   │   │   ├── _container.scss
+│   │   │   │   ├── _fonteawesome.scss
+│   │   │   │   ├── index.scss
+│   │   │   │   └── _table.scss
+│   │   │   └── index.scss
+│   │   └── theme
+│   │       ├── index.scss
+│   │       └── _variaveis.scss
+│   └── theme.js
+└── search-tables.php
 
 ```

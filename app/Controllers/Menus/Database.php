@@ -26,6 +26,11 @@ class Database extends RenderHtml implements InterfaceController
         $this->request();
     }
 
+    /**
+     * Get database tables
+     * @since 1.0.0
+     * @return void
+     */
     private function handle_database()
     {
         $this->database = [];
@@ -54,7 +59,8 @@ class Database extends RenderHtml implements InterfaceController
 
     /**
      * Render the menu view file
-     * @return Void
+     * @since 1.0.0
+     * @return void
      */
     public function request()
     {

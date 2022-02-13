@@ -28,6 +28,12 @@ class Table  extends RenderHtml implements InterfaceController
         $this->request();
     }
 
+    /**
+     * Get table rows
+     * @since 1.0.0
+     * @param array $vars
+     * @return void
+     */
     private function handle_table( $vars )
     {
         $table = [];
@@ -42,7 +48,8 @@ class Table  extends RenderHtml implements InterfaceController
 
     /**
      * Render the menu view file
-     * @return Void
+     * @since 1.0.0
+     * @return void
      */
     public function request()
     {

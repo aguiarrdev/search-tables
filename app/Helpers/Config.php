@@ -6,13 +6,14 @@ namespace SearchTables\Helpers;
  * Name: Config
  * Description: Create configuration methods
  * @package Helper
- * @since 0.0.1
+ * @since 1.0.0
  */
 class Config {
 
     /**
      * Configure the menu controllers
-     * @return Array
+     * @since 1.0.0
+     * @return array
      */
     public static function controllers() 
     {

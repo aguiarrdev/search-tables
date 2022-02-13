@@ -12,7 +12,8 @@ class Utils {
 
     /**
      * Parse controller name to view name
-     * @return String
+     * @since 1.0.0
+     * @return string
      */
     public static function parse_view( $controller ) 
     {
@@ -40,7 +41,8 @@ class Utils {
 
     /**
      * Parse view name to controller name
-     * @return String
+     * @since 1.0.0
+     * @return string
      */
     public static function parse_controller( $vew, $namespace = "Actions" ) 
     {
@@ -83,7 +85,8 @@ class Utils {
 
     /**
      * Redirect user to menu page
-     * @return Void
+     * @since 1.0.0
+     * @return void
      */
     public static function redirect_to_menu_page( $to_page )
     {
@@ -92,7 +95,8 @@ class Utils {
 
     /**
      * Get the request vars
-     * @return Mixed
+     * @since 1.0.0
+     * @return bool|array
      */
     public static function get_requests_vars()
     {

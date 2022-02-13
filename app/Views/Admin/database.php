@@ -1,13 +1,8 @@
 <div class="wrap search-table">
     <div class="container">
         <div class="table">
-            <div class="row">
-                <h1 class="col-sm"><?php echo __('Search Tables'); ?></h1>
-                <hr>
-            </div>
-            <br>
+            <?php require_once __DIR__ . "/template-parts/header.php"; ?>
             <table id="table-list" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
-
                 <?php if (isset($tables) && is_array($tables)) : ?>
                     <thead>
                         <tr class="heade">

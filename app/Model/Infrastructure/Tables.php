@@ -10,7 +10,6 @@ namespace SearchTables\Model\Infrastructure;
 
 class Tables
 {
-    private array $tables;
     private string $db_name;
     private $db;
 
@@ -23,6 +22,12 @@ class Tables
         
     }
 
+    /**
+     * Get table rows
+     * @since 1.0.0
+     * @param string $table
+     * @return array
+     */
     public function get_table( $table )
     {
         $query = "SELECT * FROM $table;";
@@ -31,6 +36,12 @@ class Tables
         return $results;
     }
 
+    /**
+     * Get table columns
+     * @since 1.0.0
+     * @param string $table
+     * @return array
+     */
     public function get_table_columns( $table )
     {
         $query = "DESCRIBE $table";
@@ -39,7 +50,13 @@ class Tables
         return $results;
     }
 
-    public function get_table_size( string $table ): int
+    /**
+     * Get table size
+     * @since 1.0.0
+     * @param string $table
+     * @return array
+     */
+    public function get_table_size( $table )
     {
         $query = "SELECT
         ((DATA_LENGTH + INDEX_LENGTH) / 1024 )
@@ -56,6 +73,11 @@ class Tables
         return $results['((DATA_LENGTH + INDEX_LENGTH) / 1024 )'];
     }
 
+    /**
+     * Get all tables
+     * @since 1.0.0
+     * @return array
+     */
     public function show_tables()
     {
         $query = "SHOW TABLES;";
@@ -66,7 +88,12 @@ class Tables
         return $tables;
     }
 
-    private function sanitize_table_name( array $table_list ): array
+    /**
+     * Sanitize table name
+     * @since 1.0.0
+     * @return array
+     */
+    private function sanitize_table_name( $table_list )
     {
         $results = [];
         foreach ( $table_list as $table ) {
@@ -79,7 +106,12 @@ class Tables
         return $results;
     }
 
-    private function get_database_name(): void
+    /**
+     * Get database name
+     * @since 1.0.0
+     * @return void
+     */
+    private function get_database_name()
     {
         $query = "SELECT database();";
         $results = (array)$this->db->get_results($query)[0];
