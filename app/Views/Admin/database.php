@@ -21,7 +21,7 @@
                             <tr class="table-row table-row-tables" data-table="<?php echo __(isset($table['name']) ? $table['name'] : '') ?>">
                                 <td><?php echo __(isset($table['name']) ? $table['name'] : ''); ?></td>
                                 <td><?php echo __(isset($table['size']) ? $table['size'] : ''); ?></td>
-                                <td class="td-actions"><button class="btn btn-action" data-table="<?php echo __(isset($table['name']) ? $table['name'] : '') ?>">Open<i class="fas fa-folder-open"></i></button></td>
+                                <td class="st-td-actions"><button class="btn btn-action" data-table="<?php echo __(isset($table['name']) ? $table['name'] : '') ?>">View <i color="#f04e23">👁</i></button></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

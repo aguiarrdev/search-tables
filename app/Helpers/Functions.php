@@ -18,17 +18,7 @@ class Functions
      */
     public static function create_admin_menu()
     {
-        add_menu_page(
-            WP_PLUGIN_NAME, 
-            WP_PLUGIN_NAME,
-            'read',
-            WP_PLUGIN_SLUG,
-            false,
-            'dashicons-search'
-        );
-
         new Menus();
-
         self::enqueue_admin_scripts();
     }
 

@@ -22,7 +22,7 @@ class Tables
 
     shortStrings() {
 
-        const tds = document.querySelectorAll("td");
+        const tds = document.querySelectorAll(".st-td");
 
         tds.forEach(td => {
 
@@ -38,7 +38,7 @@ class Tables
             let arr = Array.from(td.innerHTML);
             let text = "";
             
-            if (arr.length > 50 && ! td.classList.contains("td-actions")) {
+            if (arr.length > 50 && ! td.classList.contains("st-td-actions")) {
                 arr.forEach(element => {
                     if (text.length < 50) {
                         text += element;
@@ -50,14 +50,14 @@ class Tables
 
             td.appendChild(hidden);
 
-            if (!td.classList.contains("td-actions")) {
+            if (!td.classList.contains("st-td-actions")) {
                 td.appendChild(i);
             }
         } );
     }
 
     handleCopy() {
-        const tds = document.querySelectorAll("td");
+        const tds = document.querySelectorAll(".st-td");
         tds.forEach(td => {
             const i = td.querySelector("i");
 

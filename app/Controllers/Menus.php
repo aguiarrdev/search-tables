@@ -50,11 +50,8 @@ class Menus {
      */
     private function create_menus( $menus ) 
     {
-
         foreach ( $menus as $menu ) {
-            add_submenu_page(WP_PLUGIN_SLUG ,$menu['title'],$menu['title'],'manage_options',$menu['slug'],$menu['function'],$menu['position']);
+            add_submenu_page('tools.php' ,$menu['title'],$menu['title'],'manage_options',$menu['slug'],$menu['function'],$menu['position']);
         }
-
-        remove_submenu_page(WP_PLUGIN_SLUG ,WP_PLUGIN_SLUG);
     }
 }
