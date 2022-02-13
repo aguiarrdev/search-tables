@@ -1,8 +1,0 @@
-# ignore folders
-vendor/
-dist/
-node_modules/
-.cache/
-
-# ignore files
-*.lock
